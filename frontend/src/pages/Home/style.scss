@@ -1,0 +1,33 @@
+@use '../../base';
+
+.Home {
+    text-align: center;
+    .container { 
+        @extend %col-center;
+        width: 100%;
+        height: 75vh;
+        h1{
+            font-size: 4.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Home {
+        .container {
+            h1{
+                font-size: 3.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Home {
+        .container {
+            h1{
+                font-size: 2.5em;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@use '../../base';
+
+.task-section {
+    position: relative;
+}
+
+/*WRITE TASK STYLE*/
+.task {
+    width: 100%;
+    background-color: base.$light-color;
+    .task-main {
+        @extend %row-center;
+        .task-note {
+            @extend %col-center;
+            width: 100%;
+            button {
+                align-self: flex-end;
+            }
+        }
+        .task-note-input {
+            border: 0;
+            outline: 0;
+            background-color: white;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+}
+
+/*SEARCH TASK STYLE*/
+.search-task {
+    .search-main {
+      @extend %row-center;
+      margin-top: 3rem;
+      .search-input {
+        width: 100%;
+        max-width: 500px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+  
+        &:focus {
+          border-color: base.$primary-color;
+          box-shadow: 0 0 5px base.$light-color;
+          outline: none;
+        }
+      }
+    }
+  }
+
+/*TASK LIST SECTION STYLE*/
+.task-list-section {
+    @extend %col-center;
+    h2 {
+        text-align: center;
+        color: base.$primary-color;
+        font-family: base.$second-font;
+    }
+    .task-list-container {
+        width: auto;
+        @extend %row-center;
+        margin: 10px auto;
+        .task-list {
+            @extend %row-center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 25px;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .task-list-section .task-list-container .task-list {
+        justify-content: center;
+    }
+}

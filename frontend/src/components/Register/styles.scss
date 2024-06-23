@@ -1,0 +1,51 @@
+@use '../../base';
+
+.register-section {
+    width: 100%;
+    height: 75vh;
+    @extend %row-center;
+    .container {
+        position: relative;
+        .register-form {
+            @extend %form-box;
+            position: relative;
+            box-shadow: base.$darkShadow;
+            margin: 3em auto;
+            max-width: 500px;
+            z-index: 10;
+            background-color: white;
+            .redirect {
+                display: none;
+                margin-top: 1em;
+                text-align: center;
+            }
+            button {
+                width: 100%;
+            }
+        }
+        .login-form {
+            @extend %form-box;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            color: white;
+            text-align: center;
+            background: base.$reverse-gradient-color;
+            height: 430px;
+            @extend %row-center;
+            a {
+                color: base.$second-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .register-section .container .register-form .redirect {
+        display: block;
+    }
+    .register-section .container .login-form {
+        display: none;
+    }
+}

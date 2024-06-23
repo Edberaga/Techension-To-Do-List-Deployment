@@ -1,0 +1,64 @@
+$primary-color: #F5834D;
+$second-color: #50413C;
+$light-color: #FFC3A7;
+$gradient-color: linear-gradient(to right, $light-color 0%, $primary-color 100%);
+$reverse-gradient-color: linear-gradient(to right, $primary-color 100%, $light-color 0% );
+
+$primary-font: "Cormorant", serif;
+$second-font: "Just Another Hand", cursive;
+$text-font: "Lato", serif;
+
+$fastTrans: 0.16s ease-in;
+$mediumTrans: 0.32s ease-in;
+$lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$darkShadow: -5px 5px 25px rgba(0, 0, 0, 0.35);
+
+%row-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%col-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+%form-box {
+  padding: 2em 3em;
+  border-radius: 10px;
+}
+@each $weight in 400, 600, 700 {
+    .weight-#{$weight} {
+      font-weight: $weight;
+    }
+}
+
+@each $style in bg, btn {
+  .#{$style}-app {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+.btn-update {
+  color: white;
+  padding: 12px 50px;
+  border-radius: 5px;
+  background-color: $second-color;
+}
+
+.btn-update:hover {
+  color: wheat;
+}
+
+.btn-gradient-app {
+  background: $gradient-color;
+  font-size: 1.05em;
+  color: white;
+  padding: 12px 50px;
+  border-radius: 5px;
+  border: 0;
+}

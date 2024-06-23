@@ -1,0 +1,39 @@
+@use '../../../base';
+
+.card {
+    height: 200px;
+    width: 300px;
+    box-shadow: base.$lightShadow;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        .card-list {
+            @extend %row-center;
+            justify-content: space-between;
+            margin-top: auto;
+            gap: 7px;
+            .btn {
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                span {
+                    font-size: 15px;
+                }
+            }
+            .button-list {
+                display: flex;
+                gap: 5px;
+                .btn {
+                    padding: 3px 7px;
+                    font-size: 18px;
+                }
+            }
+        }
+    } 
+}
+
+.status-tag {
+    padding: 5px 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+}

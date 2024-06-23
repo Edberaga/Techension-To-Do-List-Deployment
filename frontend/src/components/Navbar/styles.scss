@@ -1,0 +1,18 @@
+@use '../../base';
+
+.search-btn {
+    border-color: base.$primary-color;
+}
+
+.search-btn:hover {
+    background-color: base.$primary-color;
+    color: white;
+}
+
+.gap {
+    gap: 15px;
+}
+
+.logout-item{
+    cursor: pointer;
+}
